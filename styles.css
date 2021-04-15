@@ -9,9 +9,21 @@ body {
   background: rgb(32, 35, 41);
   color: rgb(158, 158, 158);
 }
+
+ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 1em;
+  justify-content: flex-end;
+}
+
 a {
   text-decoration: none;
 }
+a:hover {
+  color: orange;
+}
+
 .header {
   margin: 0;
   background: #fefefe;
@@ -37,10 +49,34 @@ a {
 }
 .characters {
   background: #24282f;
+  display: grid;
+  padding: 2em;
+  grid-template-columns: repeat(autofit, minmax(600px, 1fr));
+  grid-gap: 2em;
 }
 .character {
   background: #3c3e44;
   color: #fff;
+  display: grid;
+  grid-auto-flow: column;
+  border-radius: 1em;
+  grid-template-columns: auto 1fr;
+}
+
+.character_info {
+  display: grid;
+  padding: 0.75em;
+}
+
+.character_info * {
+  margin: 0;
+}
+
+.character img {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  height: 14em;
+  width: 13em;
 }
 .character h3 {
   color: #9d9d9d;
